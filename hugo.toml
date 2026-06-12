@@ -1,0 +1,59 @@
+baseURL = "https://auto-2bd.github.io/kiro-blog/"
+languageCode = "ko"
+title = "IT 블로그"
+theme = "PaperMod"
+paginate = 5
+
+[params]
+  env = "production"
+  title = "IT 블로그"
+  description = "IT 기술, 개발, 트렌드에 대한 블로그"
+  author = "Admin"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+  [params.homeInfoParams]
+    Title = "IT 블로그에 오신 것을 환영합니다"
+    Content = "개발, 클라우드, AI, 보안 등 IT 전반에 대한 이야기를 나눕니다."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/auto-2bd"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "글 목록"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "태그"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "search"
+    name = "검색"
+    url = "/search/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "monokai"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
